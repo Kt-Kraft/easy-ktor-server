@@ -1,0 +1,41 @@
+services:
+  ktor_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ktor-api
+    environment:
+      APP_DEPLOYMENT_ENV: ${APP_DEPLOYMENT_ENV}
+      APP_VERSION: ${APP_VERSION}
+      APP_BUILD_NUMBER: ${APP_BUILD_NUMBER}
+      APP_DB_URI: ${APP_DB_URI}
+      APP_DB_NAME: ${APP_DB_NAME}
+      APP_DB_USERNAME: ${APP_DB_USERNAME}
+      APP_DB_PASSWORD: ${APP_DB_PASSWORD}
+      APP_BASIC_AUTH_USERNAME: ${APP_BASIC_AUTH_USERNAME}
+      APP_BASIC_AUTH_PASSWORD: ${APP_BASIC_AUTH_PASSWORD}
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${APP_DB_NAME}
+      POSTGRES_USER: ${APP_DB_USERNAME}
+      POSTGRES_PASSWORD: ${APP_DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+
+volumes:
+  postgres_data:
+    driver: local

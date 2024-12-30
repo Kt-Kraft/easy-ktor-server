@@ -1,0 +1,123 @@
+[versions]
+benManes = "0.51.0"
+catalogUpdate = "0.8.5"
+chQosLogback = "1.5.15"
+crackthecodeabhi = "0.9.0"
+detekt = "1.23.6"
+eclipseAngus = "2.0.2"
+flyway = "11.1.0"
+googleOauthHttp = "1.20.0"
+guava = "23.0"
+indramahkota = "1.3.1"
+inlineLogger = "1.0.6"
+jakarta-mail = "2.1.2"
+jakson = "2.17.2"
+koin = "4.0.1"
+kopendium = "4.0.3"
+kotlin = "2.1.0"
+kotlinExposed = "0.57.0"
+kotlinxSerializationJson = "1.7.1"
+ktor = "3.0.3"
+mindrot = "0.4"
+postgresql = "42.7.4"
+shadow = "8.3.5"
+typesafeConfig = "1.4.3"
+zaxxer = "6.2.1"
+
+[libraries]
+crackthecodeabhi-kreds = { module = "io.github.crackthecodeabhi:kreds", version.ref = "crackthecodeabhi" }
+detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+detekt-rules-libraries = { module = "io.gitlab.arturbosch.detekt:detekt-rules-libraries", version.ref = "detekt" }
+eclipse-angus-gimap = { module = "org.eclipse.angus:gimap", version.ref = "eclipseAngus" }
+eclipse-angus-imap = { module = "org.eclipse.angus:imap", version.ref = "eclipseAngus" }
+eclipse-angus-smtp = { module = "org.eclipse.angus:smtp", version.ref = "eclipseAngus" }
+exposed-core = { module = "org.jetbrains.exposed:exposed-core", version.ref = "kotlinExposed" }
+exposed-dao = { module = "org.jetbrains.exposed:exposed-dao", version.ref = "kotlinExposed" }
+exposed-java-time = { module = "org.jetbrains.exposed:exposed-java-time", version.ref = "kotlinExposed" }
+exposed-jdbc = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "kotlinExposed" }
+flyway-core = { module = "org.flywaydb:flyway-core", version.ref = "flyway" }
+flyway-database-postgresql = { module = "org.flywaydb:flyway-database-postgresql", version.ref = "flyway" }
+google-guava = { module = "com.google.guava:guava", version.ref = "guava" }
+google-oauth-http = { module = "com.google.auth:google-auth-library-oauth2-http", version.ref = "googleOauthHttp" }
+jakarta-mail = { module = "jakarta.mail:jakarta.mail-api", version.ref = "jakarta-mail" }
+jakson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jakson" }
+jakson-dataformat-yaml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml", version.ref = "jakson" }
+jakson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jakson" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-core-coroutines = { module = "io.insert-koin:koin-core-coroutines", version.ref = "koin" }
+koin-ktor = { module = "io.insert-koin:koin-ktor", version.ref = "koin" }
+koin-logger-slf4j = { module = "io.insert-koin:koin-logger-slf4j", version.ref = "koin" }
+koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
+kopendium-core = { module = "io.bkbn:kompendium-core", version.ref = "kopendium" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-client-logging-jvm = { module = "io.ktor:ktor-client-logging-jvm", version.ref = "ktor" }
+ktor-serialization-kotlinx-json-jvm = { module = "io.ktor:ktor-serialization-kotlinx-json-jvm", version.ref = "ktor" }
+ktor-server-auth = { module = "io.ktor:ktor-server-auth", version.ref = "ktor" }
+ktor-server-auth-jwt = { module = "io.ktor:ktor-server-auth-jwt", version.ref = "ktor" }
+ktor-server-call-logging = { module = "io.ktor:ktor-server-call-logging", version.ref = "ktor" }
+ktor-server-cio-jvm = { module = "io.ktor:ktor-server-cio-jvm", version.ref = "ktor" }
+ktor-server-content-negotiation-jvm = { module = "io.ktor:ktor-server-content-negotiation-jvm", version.ref = "ktor" }
+ktor-server-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor" }
+ktor-server-core-jvm = { module = "io.ktor:ktor-server-core-jvm", version.ref = "ktor" }
+ktor-server-cors = { module = "io.ktor:ktor-server-cors", version.ref = "ktor" }
+ktor-server-html-builder = { module = "io.ktor:ktor-server-html-builder", version.ref = "ktor" }
+ktor-server-netty = { module = "io.ktor:ktor-server-netty", version.ref = "ktor" }
+ktor-server-netty-jvm = { module = "io.ktor:ktor-server-netty-jvm", version.ref = "ktor" }
+ktor-server-openapi = { module = "io.ktor:ktor-server-openapi", version.ref = "ktor" }
+ktor-server-request-validation = { module = "io.ktor:ktor-server-request-validation", version.ref = "ktor" }
+ktor-server-sessions = { module = "io.ktor:ktor-server-sessions", version.ref = "ktor" }
+ktor-server-status-pages = { module = "io.ktor:ktor-server-status-pages", version.ref = "ktor" }
+ktor-server-swagger = { module = "io.ktor:ktor-server-swagger", version.ref = "ktor" }
+ktor-server-test-host-jvm = { module = "io.ktor:ktor-server-test-host-jvm", version.ref = "ktor" }
+ktor-server-tests-jvm = { module = "io.ktor:ktor-server-tests-jvm", version.ref = "ktor" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "chQosLogback" }
+michael-bull-inline-logger = { module = "com.michael-bull.kotlin-inline-logger:kotlin-inline-logger", version.ref = "inlineLogger" }
+mindrot-jbcrypt = { module = "org.mindrot:jbcrypt", version.ref = "mindrot" }
+postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresql" }
+typesafe-config = { module = "com.typesafe:config", version.ref = "typesafeConfig" }
+zaxxer-hikaricp = { module = "com.zaxxer:HikariCP", version.ref = "zaxxer" }
+
+[bundles]
+exposed = [
+  "exposed-core",
+  "exposed-java-time",
+  "exposed-jdbc",
+]
+ktor = [
+  "ktor-serialization-kotlinx-json-jvm",
+  "ktor-server-auth",
+  "ktor-server-auth-jwt",
+  "ktor-server-call-logging",
+  "ktor-server-content-negotiation-jvm",
+  "ktor-server-core",
+  "ktor-server-cors",
+  "ktor-server-html-builder",
+  "ktor-server-netty",
+  "ktor-server-request-validation",
+  "ktor-server-status-pages",
+  "ktor-server-swagger",
+]
+ktor-client = [
+  "ktor-client-cio",
+  "ktor-client-content-negotiation",
+  "ktor-client-core",
+  "ktor-client-logging",
+  "ktor-client-logging-jvm",
+  "ktor-serialization-kotlinx-json-jvm",
+]
+
+[plugins]
+ben-manes-versions = { id = "com.github.ben-manes.versions", version.ref = "benManes" }
+convention-commitlint = { id = "commitlint", version.ref = "indramahkota" }
+detekt = "io.gitlab.arturbosch.detekt:1.23.7"
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+ktor-plugin = { id = "io.ktor.plugin", version.ref = "ktor" }
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
+version-catalog-update = { id = "nl.littlerobots.version-catalog-update", version.ref = "catalogUpdate" }
