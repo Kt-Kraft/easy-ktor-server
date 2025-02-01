@@ -1,25 +1,25 @@
 [versions]
-benManes = "0.51.0"
+benManes = "0.52.0"
 catalogUpdate = "0.8.5"
-chQosLogback = "1.5.15"
+chQosLogback = "1.5.16"
 crackthecodeabhi = "0.9.0"
 detekt = "1.23.6"
 eclipseAngus = "2.0.2"
-flyway = "11.1.0"
+flyway = "11.3.0"
 googleOauthHttp = "1.20.0"
 guava = "23.0"
-indramahkota = "1.3.1"
+indramahkota = "1.3.2"
 inlineLogger = "1.0.6"
 jakarta-mail = "2.1.2"
 jakson = "2.17.2"
-koin = "4.0.1"
+koin = "4.1.0-Beta5"
 kopendium = "4.0.3"
-kotlin = "2.1.0"
-kotlinExposed = "0.57.0"
+kotlin = "2.1.10"
+kotlinExposed = "0.58.0"
 kotlinxSerializationJson = "1.7.1"
 ktor = "3.0.3"
 mindrot = "0.4"
-postgresql = "42.7.4"
+postgresql = "42.7.5"
 shadow = "8.3.5"
 typesafeConfig = "1.4.3"
 zaxxer = "6.2.1"
@@ -46,6 +46,7 @@ jakson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-k
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-core-coroutines = { module = "io.insert-koin:koin-core-coroutines", version.ref = "koin" }
 koin-ktor = { module = "io.insert-koin:koin-ktor", version.ref = "koin" }
+koin-ktor3 = { module = "io.insert-koin:koin-ktor3", version.ref = "koin" }
 koin-logger-slf4j = { module = "io.insert-koin:koin-logger-slf4j", version.ref = "koin" }
 koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
 kopendium-core = { module = "io.bkbn:kompendium-core", version.ref = "kopendium" }

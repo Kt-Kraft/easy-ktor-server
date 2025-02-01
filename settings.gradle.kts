@@ -31,7 +31,6 @@ plugins {
 
 include(":app:core")
 include(":app:infra")
-include(":app:koin-ktor")
 
 include(":app:adapters:env")
 include(":app:adapters:persist")

@@ -35,11 +35,11 @@ dependencies {
   implementation(projects.app.adapters.persist)
   implementation(projects.app.adapters.remoting)
   implementation(projects.app.adapters.primaryWeb)
-  implementation(projects.app.koinKtor)
 
   // Others
   implementation(libs.bundles.ktor)
   implementation(libs.koin.core)
+  implementation(libs.koin.ktor3)
   implementation(libs.kopendium.core)
   implementation(libs.logback.classic)
   testImplementation(libs.kotlin.test.junit)
