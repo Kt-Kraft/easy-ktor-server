@@ -8,15 +8,12 @@ eclipseAngus = "2.0.2"
 flyway = "11.3.0"
 googleOauthHttp = "1.20.0"
 guava = "23.0"
-indramahkota = "1.3.2"
-inlineLogger = "1.0.6"
+indramahkota = "1.4.0"
 jakarta-mail = "2.1.2"
-jakson = "2.17.2"
 koin = "4.1.0-Beta5"
 kopendium = "4.0.3"
 kotlin = "2.1.10"
 kotlinExposed = "0.58.0"
-kotlinxSerializationJson = "1.7.1"
 ktor = "3.0.3"
 mindrot = "0.4"
 postgresql = "42.7.5"
@@ -40,9 +37,6 @@ flyway-database-postgresql = { module = "org.flywaydb:flyway-database-postgresql
 google-guava = { module = "com.google.guava:guava", version.ref = "guava" }
 google-oauth-http = { module = "com.google.auth:google-auth-library-oauth2-http", version.ref = "googleOauthHttp" }
 jakarta-mail = { module = "jakarta.mail:jakarta.mail-api", version.ref = "jakarta-mail" }
-jakson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jakson" }
-jakson-dataformat-yaml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml", version.ref = "jakson" }
-jakson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jakson" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-core-coroutines = { module = "io.insert-koin:koin-core-coroutines", version.ref = "koin" }
 koin-ktor = { module = "io.insert-koin:koin-ktor", version.ref = "koin" }
@@ -52,7 +46,6 @@ koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
 kopendium-core = { module = "io.bkbn:kompendium-core", version.ref = "kopendium" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
 ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
@@ -62,15 +55,11 @@ ktor-serialization-kotlinx-json-jvm = { module = "io.ktor:ktor-serialization-kot
 ktor-server-auth = { module = "io.ktor:ktor-server-auth", version.ref = "ktor" }
 ktor-server-auth-jwt = { module = "io.ktor:ktor-server-auth-jwt", version.ref = "ktor" }
 ktor-server-call-logging = { module = "io.ktor:ktor-server-call-logging", version.ref = "ktor" }
-ktor-server-cio-jvm = { module = "io.ktor:ktor-server-cio-jvm", version.ref = "ktor" }
 ktor-server-content-negotiation-jvm = { module = "io.ktor:ktor-server-content-negotiation-jvm", version.ref = "ktor" }
 ktor-server-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor" }
-ktor-server-core-jvm = { module = "io.ktor:ktor-server-core-jvm", version.ref = "ktor" }
 ktor-server-cors = { module = "io.ktor:ktor-server-cors", version.ref = "ktor" }
 ktor-server-html-builder = { module = "io.ktor:ktor-server-html-builder", version.ref = "ktor" }
 ktor-server-netty = { module = "io.ktor:ktor-server-netty", version.ref = "ktor" }
-ktor-server-netty-jvm = { module = "io.ktor:ktor-server-netty-jvm", version.ref = "ktor" }
-ktor-server-openapi = { module = "io.ktor:ktor-server-openapi", version.ref = "ktor" }
 ktor-server-request-validation = { module = "io.ktor:ktor-server-request-validation", version.ref = "ktor" }
 ktor-server-sessions = { module = "io.ktor:ktor-server-sessions", version.ref = "ktor" }
 ktor-server-status-pages = { module = "io.ktor:ktor-server-status-pages", version.ref = "ktor" }
@@ -78,7 +67,6 @@ ktor-server-swagger = { module = "io.ktor:ktor-server-swagger", version.ref = "k
 ktor-server-test-host-jvm = { module = "io.ktor:ktor-server-test-host-jvm", version.ref = "ktor" }
 ktor-server-tests-jvm = { module = "io.ktor:ktor-server-tests-jvm", version.ref = "ktor" }
 logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "chQosLogback" }
-michael-bull-inline-logger = { module = "com.michael-bull.kotlin-inline-logger:kotlin-inline-logger", version.ref = "inlineLogger" }
 mindrot-jbcrypt = { module = "org.mindrot:jbcrypt", version.ref = "mindrot" }
 postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresql" }
 typesafe-config = { module = "com.typesafe:config", version.ref = "typesafeConfig" }

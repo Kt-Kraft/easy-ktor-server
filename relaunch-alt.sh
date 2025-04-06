@@ -42,7 +42,7 @@ fi
 
 # Build and start Docker containers
 log_message "Starting Docker containers with build..."
-if ! docker-compose -f docker-compose.dev.yml up --build; then
+if ! docker-compose -f docker-compose.dev.yml -p easy_ktor_server up --build; then
     handle_error "Failed to start Docker containers."
 fi
 
