@@ -1,6 +1,6 @@
 package primaryWeb.plugins
 
-import core.usecase.GetBasicCredentialUseCase
+import core.port.BasicCredentialPort
 import io.ktor.server.application.Application
 import io.ktor.server.application.install
 import io.ktor.server.auth.Authentication
@@ -9,8 +9,8 @@ import io.ktor.server.auth.basic
 import org.koin.ktor.ext.inject
 
 internal fun Application.configureAuthentication() {
-  val getBasicCredential by inject<GetBasicCredentialUseCase>()
-  val basicCredential = getBasicCredential()
+  val basicCredentialPort by inject<BasicCredentialPort>()
+  val basicCredential = basicCredentialPort.basicCredential
 
   install(Authentication) {
     basic(name = "auth-basic") {

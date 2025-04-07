@@ -1,14 +1,12 @@
 package persist.adapter
 
-import persist.errors.DatabaseErrorInspector
-import persist.mapper.throwAsDomainException
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
+import core.models.DatabaseConfig
 import core.port.BootPersistStoragePort
 import core.port.PersistTransactionPort
 import core.port.RequiresTransactionContext
 import core.port.ShutdownPersistStoragePort
-import java.util.Properties
 import javax.sql.DataSource
 import kotlinx.coroutines.Dispatchers
 import org.flywaydb.core.Flyway
@@ -18,9 +16,11 @@ import org.jetbrains.exposed.sql.transactions.TransactionManager
 import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransaction
 import org.jetbrains.exposed.sql.transactions.experimental.withSuspendTransaction
 import org.jetbrains.exposed.sql.transactions.transactionManager
+import persist.errors.DatabaseErrorInspector
+import persist.mapper.throwAsDomainException
 
 internal class PersistAdapter(
-  private val databaseConfig: Properties,
+  private val databaseConfig: DatabaseConfig,
   private val errorInspector: DatabaseErrorInspector,
 ) : BootPersistStoragePort, ShutdownPersistStoragePort, PersistTransactionPort {
 
@@ -71,11 +71,17 @@ internal class PersistAdapter(
   }
 
   override suspend fun <T> bootStorage(preInit: suspend () -> T) {
-    ds = HikariDataSource(HikariConfig(databaseConfig))
+    ds = HikariDataSource(createHikariConfig(databaseConfig))
     db = Database.connect(ds)
     withNewTransaction {
       preInit.invoke()
       runFlyway(ds)
+    }
+  }
+
+  override fun shutdownStorage() {
+    if (this::ds.isInitialized) {
+      ds.close()
     }
   }
 
@@ -87,9 +93,13 @@ internal class PersistAdapter(
     flyway.migrate()
   }
 
-  override fun shutdownStorage() {
-    if (this::ds.isInitialized) {
-      ds.close()
+  private fun createHikariConfig(config: DatabaseConfig): HikariConfig {
+    return HikariConfig().apply {
+      dataSourceClassName = config.dataSourceClassName
+      addDataSourceProperty("url", config.dataSource.url)
+      addDataSourceProperty("user", config.dataSource.user)
+      addDataSourceProperty("password", config.dataSource.password)
+      isAutoCommit = config.autoCommit
     }
   }
 }

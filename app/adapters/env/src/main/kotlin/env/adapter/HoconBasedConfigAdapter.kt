@@ -3,11 +3,12 @@ package env.adapter
 import com.typesafe.config.Config
 import com.typesafe.config.ConfigFactory
 import core.models.BasicCredential
+import core.models.DataSourceConfig
+import core.models.DatabaseConfig
 import core.models.DeploymentConfig
 import core.port.BasicCredentialPort
 import core.port.DatabaseConfigPort
 import core.port.DeploymentConfigPort
-import java.util.Properties
 
 internal class HoconBasedConfigAdapter(
   deploymentEnv: String,
@@ -31,13 +32,17 @@ internal class HoconBasedConfigAdapter(
     )
   }
 
-  override val databaseConfig: Properties by lazy {
+  override val databaseConfig: DatabaseConfig by lazy {
     val node = config.getConfig("main-db.hikari")
-    Properties().apply {
-      for (entry in node.entrySet()) {
-        setProperty(entry.key, node.getString(entry.key))
-      }
-    }
+    DatabaseConfig(
+      dataSourceClassName = node.getString("dataSourceClassName"),
+      dataSource = DataSourceConfig(
+        url = node.getString("dataSource.url"),
+        user = node.getString("dataSource.user"),
+        password = node.getString("dataSource.password")
+      ),
+      autoCommit = node.getBoolean("autoCommit")
+    )
   }
 
   override val basicCredential: BasicCredential by lazy {

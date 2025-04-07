@@ -1,4 +1,4 @@
-package persist.impl
+package primaryWeb.usecase
 
 import core.models.Log
 import core.port.AddLogPort

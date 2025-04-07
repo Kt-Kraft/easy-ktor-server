@@ -1,8 +1,8 @@
 package core.port
 
 import core.models.BasicCredential
+import core.models.DatabaseConfig
 import core.models.DeploymentConfig
-import java.util.Properties
 
 public interface DeploymentEnvPort {
   public val deploymentEnv: String
@@ -13,7 +13,7 @@ public interface DeploymentConfigPort {
 }
 
 public interface DatabaseConfigPort {
-  public val databaseConfig: Properties
+  public val databaseConfig: DatabaseConfig
 }
 
 public interface BasicCredentialPort {

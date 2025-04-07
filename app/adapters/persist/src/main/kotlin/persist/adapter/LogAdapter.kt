@@ -29,6 +29,6 @@ internal class LogAdapter : AddLogPort {
     id = row[LogTable.id].value,
     type = row[type],
     details = row[details],
-    createdAt = row[LogTable.createdAt],
+    createdAt = row[LogTable.createdAt].toString(),
   )
 }

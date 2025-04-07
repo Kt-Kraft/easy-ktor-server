@@ -11,6 +11,7 @@ import kotlinx.coroutines.runBlocking
 import org.koin.ktor.ext.inject
 import org.koin.ktor.plugin.Koin
 import persist.persistModule
+import primaryWeb.primaryWebModule
 import primaryWeb.webBootstrap
 import remoting.remotingModule
 
@@ -24,6 +25,7 @@ public fun Application.main() {
       envModule,
       persistModule,
       remotingModule,
+      primaryWebModule,
     )
   }
 
